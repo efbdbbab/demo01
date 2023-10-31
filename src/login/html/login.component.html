@@ -1,0 +1,30 @@
+<div>
+  <form [formGroup]="ruleForm">
+    <div class="inputBox">
+      <h2>Login</h2>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Enter your username</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="username">
+          <mat-icon matSuffix><i class="fa fa-user-circle" style="color: whitesmoke;"></i></mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="example-container">
+        <mat-form-field>
+          <mat-label>Enter your password</mat-label>
+          <input matInput [type]="!hide ? 'password' : 'text'" formControlName="password">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide">
+            <mat-icon>{{!hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button (click)="submitForm()">login</button>
+
+        <mat-divider style="margin: 10px"></mat-divider>
+        <button class="inputButton" color="accent" mat-raised-button [routerLink]="['/reg']">reg</button>
+        <button class="inputButton" color="accent" mat-raised-button [routerLink]="['/forgotPwd']">forgotPwd?</button>
+      </div>
+    </div>
+  </form>
+</div>

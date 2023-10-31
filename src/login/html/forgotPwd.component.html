@@ -1,0 +1,15 @@
+<div>
+  <form [formGroup]="ruleForm">
+    <div class="inputBox">
+      <h2>Forgot Password?</h2>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Enter your username</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="username">
+          <mat-icon matSuffix><i class="fa fa-user-circle" style="color: whitesmoke;"></i></mat-icon>
+        </mat-form-field>
+      </div>
+        <button mat-raised-button (click)="submitForm()">forgotPwd</button>
+    </div>
+  </form>
+</div>
